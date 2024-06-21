@@ -32,5 +32,5 @@ class TaskFactory extends Factory
             'updated_at' => time(),
         ];
     }
-    }
+    
 }
