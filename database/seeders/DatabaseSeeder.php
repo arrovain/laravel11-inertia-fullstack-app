@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Project;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -19,7 +20,12 @@ class DatabaseSeeder extends Seeder
             'name' => 'icme',
             'email' => 'icme@example.com',
             "password" => bcrypt("icmeicme"),
-            
+
         ]);
+
+        Project::factory()
+        ->count(30)
+        ->hasTasks(30)
+        ->create();
     }
 }
