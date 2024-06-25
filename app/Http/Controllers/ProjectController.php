@@ -13,6 +13,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
+        $query = Project::query();
+        
         return inertia("Project/Index", []);
     }
 
